@@ -4,11 +4,13 @@ export const Navigation = () => {
   return (
     <>
       <NavLink className="nav-link" to="/">
-        Main page
+        User events app
       </NavLink>
-      <NavLink className="nav-link" to="/events">
+      {/* <NavLink className="nav-link" to="/events">
         Events
-      </NavLink>
+      </NavLink> */}
     </>
   );
 };
+
+// ? all events on event click
