@@ -1,6 +1,6 @@
-import { deleteUserFromDB } from "../services/fetchFilms";
+import { deleteUserFromDB } from "../services/fetchUsersEvents";
 
-export const ButtonDelete = ({ id, onDeleteUserBtn }) => {
+export const ButtonDeleteUser = ({ id, onDeleteUserBtn }) => {
   const deleteUserFunc = () => {
     deleteUserFromDB(id);
     onDeleteUserBtn(id);

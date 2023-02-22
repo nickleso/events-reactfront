@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { ButtonDelete } from "./ButtonDelete";
+import { ButtonDeleteUser } from "./ButtonDeleteUser";
 
 export const UsersList = ({ users, deleteUserLocal }) => {
   return (
-    <ul>
+    <ul className="user-list">
       {users.map(
         ({ _id, firstName, lastName, email, phoneNumber, eventsCount }) => (
-          <li key={_id}>
+          <li className="user-item" key={_id}>
             <Link
               to={`${_id}/events`}
               style={{
@@ -23,7 +23,7 @@ export const UsersList = ({ users, deleteUserLocal }) => {
               <p>Next Event: </p>
             </Link>
 
-            <ButtonDelete id={_id} onDeleteUserBtn={deleteUserLocal} />
+            <ButtonDeleteUser id={_id} onDeleteUserBtn={deleteUserLocal} />
           </li>
         )
       )}

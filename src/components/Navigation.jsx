@@ -6,6 +6,7 @@ export const Navigation = () => {
       <NavLink className="nav-link" to="/">
         User events app
       </NavLink>
+
       {/* <NavLink className="nav-link" to="/events">
         Events
       </NavLink> */}

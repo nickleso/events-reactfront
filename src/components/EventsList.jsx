@@ -1,21 +1,27 @@
-export const EventsList = ({ events }) => {
-  console.log(events);
+import { ButtonDeleteEvent } from "./ButtonDeleteEvent";
+
+export const EventsList = ({ events, userId, deleteEventLocal }) => {
   return (
-    <section>
+    <>
       {events.length > 0 && (
-        <ul>
+        <ul className="user-list">
           {events.map(({ _id, title, description, startDate, endDate }) => (
-            <li key={_id}>
+            <li className="events-item" key={_id}>
               <p>Title: {title}</p>
               <p>Description: {description}</p>
               <p>Start date: {startDate}</p>
               <p>End date: {endDate}</p>
               <p>Next event: </p>
+
+              <ButtonDeleteEvent
+                id={_id}
+                userId={userId}
+                onDeleteEventBtn={deleteEventLocal}
+              />
             </li>
           ))}
         </ul>
       )}
-      {events.length === 0 && <h3>No events for this user</h3>}
-    </section>
+    </>
   );
 };

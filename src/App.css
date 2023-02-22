@@ -1,40 +1,21 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  padding: 24px 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 24px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #282c34;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link {
+  color: var(--secondary-color);
+  font-family: "Patrick Hand";
+  font-size: 18px;
+  line-height: 1.33;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+  color: var(--primary-color);
 }
 
 .container {
@@ -57,37 +38,61 @@
   padding-bottom: 48px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 48px;
-  padding-bottom: 12px;
-  /* background-image: url(../images/header-line.png); */
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: bottom;
+.nav-link {
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 24px;
+  color: #61dafb;
+  background-color: transparent;
+  /* border: 4px solid transparent; */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
 }
 
-.nav-link {
-  color: var(--secondary-color);
-  font-family: "Patrick Hand";
-  font-size: 18px;
-  line-height: 1.33;
-  text-transform: uppercase;
-
-  @media screen and (min-width: 768px) {
-    font-size: 24px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    font-size: 32px;
-  }
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #7d7d7d;
 }
 
 .active {
-  color: rgb(71, 71, 243);
+  color: #61dafb;
+  text-decoration: none;
 }
+
+.title {
+  text-align: center;
+}
+
+/* section users */
+.user-list {
+  display: grid;
+  max-width: calc(100vw - 48px);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 16px 0 0;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-item,
+.events-item {
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-item:hover {
+  background-color: #eaeaea;
+  cursor: pointer;
+}
+
+/* section events */
 
 /* modal styles */
 .Overlay {
@@ -110,4 +115,37 @@
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 70%;
+}
+
+/* Buton Load more */
+.ButtonWrap {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.Button {
+  padding: 8px 16px;
+  border-radius: 2px;
+  background-color: #2196f3;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  min-width: 180px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.Button:hover,
+.Button:focus {
+  background-color: #4ea1e5;
 }

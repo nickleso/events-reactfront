@@ -5,11 +5,11 @@ import { Navigation } from "../components/Navigation";
 export const Layout = () => {
   return (
     <>
-      <div className="container">
-        <header className="header">
+      <header className="header">
+        <div className="container">
           <Navigation />
-        </header>
-      </div>
+        </div>
+      </header>
 
       <Suspense fallback={null}>
         <Outlet />
