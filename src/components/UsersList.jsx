@@ -10,17 +10,17 @@ export const UsersList = ({ users, deleteUserLocal }) => {
             <Link
               to={`${_id}/events`}
               style={{
-                color: "#058bf8",
+                textDecoration: "none",
+                color: "inherit",
               }}
             >
               <p>
                 Username: {firstName} {lastName}
               </p>
-
               <p>Email: {email}</p>
               <p>Phone: {phoneNumber}</p>
-              <p>Events: {eventsCount}</p>
-              <p>Next Event: </p>
+              {/* <p>Events: {eventsCount}</p>
+              <p>Next Event: </p> */}
             </Link>
 
             <ButtonDeleteUser id={_id} onDeleteUserBtn={deleteUserLocal} />

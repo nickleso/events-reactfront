@@ -25,7 +25,6 @@ export const Users = () => {
         const results = await fetchUsers(page);
         setUsers(results.data);
       } catch (error) {
-        console.log(error);
         setShowButton(false);
       }
 

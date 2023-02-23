@@ -20,13 +20,13 @@ export const EventCreateForm = ({ onSubmit, onClose }) => {
   }
 
   return (
-    <div className="contacts">
-      <h2 className="contacts__title">Create event form</h2>
-      <form className="contacts__form" onSubmit={onFormSubmit}>
-        <label className="contacts__label">
+    <div className="form-wrap">
+      <h2 className="form-title">Create event form</h2>
+      <form className="form" onSubmit={onFormSubmit}>
+        <label className="form-label">
           Title
           <input
-            className="contacts__input"
+            className="form-input"
             type="text"
             name="title"
             placeholder="Title"
@@ -35,10 +35,10 @@ export const EventCreateForm = ({ onSubmit, onClose }) => {
             required
           />
         </label>
-        <label className="contacts__label">
+        <label className="form-label">
           Description
           <input
-            className="contacts__input"
+            className="form-input"
             type="text"
             name="description"
             placeholder="Description"
@@ -46,24 +46,25 @@ export const EventCreateForm = ({ onSubmit, onClose }) => {
             title="Only letters (either case), numbers, hyphens, underscores, and periods. The username must start with a letter and must be between 1 and 17 characters long."
             required
           />
-          <label className="contacts__label">
-            Start date
-            <input
-              className="contacts__input"
-              type="tel"
-              name="startDate"
-              placeholder="Start date"
-              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-              title="Start date must be digits and can contain spaces, dashes, parentheses and can start with +"
-              required
-            />
-          </label>
         </label>
-        <label className="contacts__label">
+        <label className="form-label">
+          Start date
+          <input
+            className="form-input"
+            type="date"
+            name="startDate"
+            placeholder="Start date"
+            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+            title="Start date must be digits and can contain spaces, dashes, parentheses and can start with +"
+            required
+          />
+        </label>
+
+        <label className="form-label">
           End date
           <input
-            className="contacts__input"
-            type="tel"
+            className="form-input"
+            type="date"
             name="endDate"
             placeholder="End date"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -71,7 +72,7 @@ export const EventCreateForm = ({ onSubmit, onClose }) => {
             required
           />
         </label>
-        <button className="contacts__button" type="submit">
+        <button className="button" type="submit">
           Add event
         </button>
       </form>

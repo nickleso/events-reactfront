@@ -30,7 +30,6 @@ const Events = () => {
         const results = await fetchEventsByUserId(id, page);
         setEvents(results.data);
       } catch (error) {
-        console.log(error);
         setShowButton(false);
       }
       setLoading(false);

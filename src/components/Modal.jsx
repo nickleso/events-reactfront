@@ -25,8 +25,8 @@ export const Modal = ({ onClose, children }) => {
   };
 
   return createPortal(
-    <div className="Overlay" onClick={handleBackdropClick}>
-      <div className="Modal">{children}</div>
+    <div className="overlay" onClick={handleBackdropClick}>
+      <div className="modal">{children}</div>
     </div>,
     modalRoot
   );

@@ -8,7 +8,7 @@ export const ButtonDeleteEvent = ({ id, userId, onDeleteEventBtn }) => {
 
   return (
     <button onClick={deleteUserFunc} type="button">
-      Delete user
+      Delete event
     </button>
   );
 };

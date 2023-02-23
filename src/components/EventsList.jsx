@@ -11,7 +11,7 @@ export const EventsList = ({ events, userId, deleteEventLocal }) => {
               <p>Description: {description}</p>
               <p>Start date: {startDate}</p>
               <p>End date: {endDate}</p>
-              <p>Next event: </p>
+              {/* <p>Next event: </p> */}
 
               <ButtonDeleteEvent
                 id={_id}
